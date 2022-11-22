@@ -8,27 +8,25 @@ const CaseSchema = new mongoose.Schema({
         trim: true,
         maxlength: [4, 'number can not be more than 4 characters'],
       },
-    Complainant: {
+    complainant: {
         type: String,
         required: [true, 'must provide name'],
         trim: true,
         maxlength: [20, 'name can not be more than 20 characters'],
       },
-    Accused: {
+    accused: {
         type: String,
         required: [true, 'must provide name'],
         trim: true,
         maxlength: [30, 'name can not be more than 20 characters'],
       },
     reportedOn: {
-        type: String,
-        trim: true,
+        type: Date,
+        default:Date.now()
       },
     Status: {
         type: String,
-        required: [true, 'Status must be provided'],
-        trim: true,
-        maxlength: [10, 'status can not be more than 10 characters'],
+        default:"pending"
       }
  
     }

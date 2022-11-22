@@ -11,7 +11,7 @@ addCase
 } = require('../controllers/CaseController')
 
 router.get("/",getAllCase)
-router.get("/",getCase)
+router.get("/:id",getCase)
 router.post("/",addCase)
 router.patch('/:id',updateCase)
 router.delete('/:id',deleteCase)

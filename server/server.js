@@ -12,7 +12,7 @@ const police= require('./routes/PoliceRoute');
 const criminal= require('./routes/CriminalRoute');
 const court= require('./routes/CourtRoute');
 const station= require('./routes/StationRoute');
-const cases= require('./routes/CaseController');
+const cases= require('./routes/CaseRoute');
 const prison= require('./routes/PrisonRoute');
 
 app.use(express.json())
