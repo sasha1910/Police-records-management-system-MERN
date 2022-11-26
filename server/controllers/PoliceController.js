@@ -30,6 +30,7 @@ const deletePolice = async (req, res, next) => {
   }
   res.status(200).json({ police })
 }
+
 const updatePolice = async (req, res, next) => {
   const { id: policeID } = req.params
  const{ no,email,name,phone }=req.body;

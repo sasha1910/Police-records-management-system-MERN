@@ -31,9 +31,9 @@ const deleteCase = async (req, res, next) => {
 }
 const updateCase = async (req, res, next) => {
   const { id: caseID } = req.params
- const{ no,name,location }=req.body;
+ const{ no,name,Location }=req.body;
 
-  const caselist = await Case.findOneAndUpdate({ _id: caseID}, { no,name,location}, {
+  const caselist = await Case.findOneAndUpdate({ _id: caseID}, { no,name,Location}, {
     new: true,
     runValidators: true,
   })

@@ -33,18 +33,18 @@ const deleteStation = async (req, res, next) => {
 }
 const updateStation = async (req, res, next) => {
   const { id: stationID } = req.params
- const{ no,name,location }=req.body;
+ const{ no,name,Location }=req.body;
 
-  const station = await Station.findOneAndUpdate({ _id: stationID}, { no,name,location}, {
+  const station = await Station.findOneAndUpdate({ _id: stationID}, { no,name,Location}, {
     new: true,
     runValidators: true,
   })
 
-  if (!Station) {
+  if (!station) {
     return next(createCustomError(`No member with id : ${stationID}`, 404))
   }
 
-  res.status(200).json({ Station })
+  res.status(200).json({ station })
 }
 
 module.exports = {

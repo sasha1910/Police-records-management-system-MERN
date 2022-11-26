@@ -11,7 +11,7 @@ addStation
 } = require('../controllers/StationController')
 
 router.get("/",getAllStation)
-router.get("/",getStation)
+router.get("/:id",getStation)
 router.post("/",addStation)
 router.patch('/:id',updateStation)
 router.delete('/:id',deleteStation)
